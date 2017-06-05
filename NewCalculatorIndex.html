@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">		
+		body{
+		background-image: url('https://media.giphy.com/media/E3Gqhoz7bjU4M/giphy.gif');
+	}
+		button:hover{
+			background: yellow;
+
+
+		}
+		button{
+			font-size: 20px;
+			color: red;
+			height: 75px;
+			width: 75px;
+			border-radius: 50px;
+			opacity: .5;
+			background-image: url('https://media.giphy.com/media/E3Gqhoz7bjU4M/giphy.gif');
+		}
+
+		input {
+			height: 50px;
+			width: 300px;
+			font-size: 40px;
+			border-radius: 25px;
+		}
+
+		#myh1{
+			color: white;
+			font-style: italic;
+			font-size: 25pt;
+			text-align: center;			
+			animation: robert 10s infinite;
+		}
+
+		@keyframes robert{
+			10%  {color:red;};
+		
+
+
+		}
+	</style>
+</head>
+<body>	
+	<input id="inputField" type="text" />
+	
+	<div>
+	<button onclick="numberPressed(this)" value=1>1</button>
+
+	<button onclick="numberPressed(this)" value=2>2</button>
+
+	<button onclick="numberPressed(this)" value=3>3</button>
+	</div>
+
+	<div>
+	<button onclick="numberPressed(this)" value=4>4</button>
+
+	<button onclick="numberPressed(this)" value=5>5</button>
+
+	<button onclick="numberPressed(this)" value=6>6</button>
+	</div>
+
+	<div>
+	<button onclick="numberPressed(this)" value=7>7</button>
+
+	<button onclick="numberPressed(this)" value=8>8</button>
+
+	<button onclick="numberPressed(this)" value=9>9</button>
+	</div>
+
+	<div>
+	<button onclick="numberPressed(this)" value=0>0</button>
+
+	<button onclick="numberPressed(this)" value="+">+</button>
+
+	<button onclick="numberPressed(this)" value="-">-</button>
+	</div>
+
+	<button onclick="numberPressed(this)" value="*">*</button>
+
+	<button onclick="numberPressed(this)" value="/">/</button>
+
+	<button onclick="clearInput()" value="A/C">A/C</button>
+
+	<button onclick="processEqual()" value="=">=</button>
+
+
+<h1 id="myh1">The only source of knowledge is experience</h1>
+</body>
+	<script type="text/javascript">
+		function numberPressed(buttonPressed) {
+  		document.getElementById("inputField").value += buttonPressed.value;
+	}
+
+		function clearInput() {
+  		document.getElementById("inputField").value = ""
+	}
+
+		function processEqual() {
+  
+  		var result = eval(document.getElementById("inputField").value);
+  		document.getElementById("inputField").value = result
+	}
+	</script>
+</html>
